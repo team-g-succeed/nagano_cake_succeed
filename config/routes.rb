@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  devise_for :customers
+  get 'items/index'
+  get 'items/show'
   root to: 'homes#top'
   get '/about' => 'homes#about'
   devise_for :users
